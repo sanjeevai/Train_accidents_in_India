@@ -1,8 +1,11 @@
 ---
 output:
-  pdf_document: default
-  html_document: default
-  word_document: default
+  word_document:
+    toc: true
+  html_document:
+    toc: true
+  pdf_document:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -39,9 +42,10 @@ library(qcc)
 
 ```{r}
 # import data
-tr <- read.csv("DoMS_2.5.2.csv")
+tr <- read.csv("/Users/sanjeevyadav/Google Drive/Documents/R/DoMS project/DoMS_2.5.2.csv")
 ```
 
+\newpage
 
 # 1. Abstract
 
@@ -55,7 +59,7 @@ Data was collected from various news websites, online news archives, Wikipedia a
 
 # 3. Collecting data
 
-Data was collected from online news archives ^[2]^ and converted to tidy form in R. Here is a preview of top few rows of data set:
+Data was collected from online news archives ^[2]^ and converted to tidy form in RStudio. RStudio is a free and open-source integrated development environment for R, a programming language for statistical computing and graphics. Here is a preview of top few rows of data set:
 
 ```{r}
 head(tr, 2)
@@ -77,10 +81,16 @@ Data types for all variables are correct except `time` column. `Time` column nee
 tr$time <- as.POSIXlt(tr$time, format = "%d-%m-%Y %H:%M")
 ```
 
+Verifying:
 
-# 5. Feature extraction
+```{r}
+class(tr$time)
+```
 
-Data type correction being done, next we will create some new columns from the existing ones to split our analysis based on the new columns.
+
+# 5. Feature engineering
+
+Data type correction being done, next we will create some new columns from the existing ones to create meaningful visualisations.
 
 ## **5.1.** Hour, daytime and season
 
@@ -159,11 +169,6 @@ tr$train_type <- factor(tr$train_type)
 levels(tr$train_type)
 ```
 
-```{r}
-colnames(tr)#.columns
-```
-
-
 ## 5.3. Country region
 
 Now we have `railway_division` column. 17 values for railway division column are too much and will make our graph look messy. Categorising them into North, South, East, West and Central will make our study simple. For example, n, nc, ne, nef, nw (abbreviations are provided at the end of report) will go in North area, and similarly for other regions.
@@ -221,15 +226,11 @@ The columns which are to be removed are:
 
 `Environment` column is descriptive in nature, `env` column is more specific in describing the environment of accident spot, like open area, level-crossing, etc.
 
-## 6.2. train_name
+## 6.2. Train_name
 
 Too many distinct values are there for this variable. This was used to create `train_type` column previously.
  
-## 6.3. Injured and killed columns
-
-We are looking at overall accident count, we are not interested in the casualties or damages caused after the accident. We want to prevent accidents by knowing the major causes.
-
-## 6.4. triggering_factor
+## 6.3. Triggering_factor
 
 This one is also descriptive in nature and `cause` column shows the specific cause, like human error, technical fault, etc.
 
@@ -237,8 +238,6 @@ Removing the above mentioned columns:
 
 ```{r echo = T}
 tr$environment <- NULL
-tr$injured <- NULL
-tr$killed <- NULL
 tr$triggering_factor <- NULL
 tr$train_name <- NULL
 ```
@@ -251,7 +250,7 @@ We have done these tasks till now :
 
 * Removing columns that are not important for analysis
 
-Next part is generating bivariate and multivariate plots to derive a conclusion about the year by year trends in train accidents.
+Next part is generating bivariate and multivariate plots to derive a conclusion about year by year trends in train accidents.
 
 ```{r}
 cause <- ggplot(subset(tr, cause != "unknown"))+
@@ -386,7 +385,9 @@ We will use this data to answer the following questions:
 
 **Q5.** Which type of trains suffer more accidents(express, passenger, freight, etc.)?
 
-**Q6.** What are the major causes for accidents? Most of the factors result in derailment of train as we see in news reports, but here we will try to investigate the cause for these derailments. Whether it is human error, natural cause or technical glitch.
+**Q6.** What are the major causes for accidents? Is there any significant difference across different causes? Most of the factors result in derailment of train as we see in news reports, but here we will try to investigate the cause for these derailments. Whether it is human error, natural cause or technical glitch.
+
+
 
 We have 6 features in our data which will help in answering these questions. First we will see the distribution of accident count based on each feature and then will include more features to better understand the trends.
 
@@ -401,7 +402,7 @@ rly.div
 
 The distribution based on railway division shows peaks at regions which are more general (say larger in area), like if we consider **n, nc, ne, nef** and **nw** then they collectively represent accidents that occur in North India. Some of the accidents are hard to categorize based on such granular distinction.
 
-To tackle this, we will see accidents in different parts of India, i.e., North, East, West, South and Central to classify them more clearly with less overlapping regions.
+To tackle this problem, we will see accidents in different parts of India, i.e., North, East, West, South and Central to classify them more clearly with less overlapping regions.
 
 ```{r}
 reg
@@ -437,13 +438,32 @@ Let us see the trends based on hour and then we will use **daytime** column for 
 hour
 ```
 
-This graph shows that most of the accidents take place when there is low visibility, i.e. night time or wee hours. We will not go deep into exact hour at which accident took place because the sources which provided this information gave an estimate of accident timings. That is why 10:00 hrs and 15:00 hrs have no count. Some accidents took place around evening so we put them in 17-18 hrs range, and similar is the case for 10:00hrs. We are not interested in exact time of accident, for this purpose we have created **daytime** column previously to compare trends which shows effect of visibility based on hour of accident.
+This graph shows that most of the accidents take place when there is low visibility, i.e. night time or wee hours. We will not go deep into exact hour at which accident took place because the sources which provided this information gave an estimate of accident timings. That is why 10:00 hrs and 15:00 hrs have no count. Some accidents took place around evening so we put them in 17-18 hrs range, and similar is the case for 10:00 hrs. We are not interested in exact time of accident, for this purpose we have created **daytime** column previously to compare trends which shows effect of visibility based on hour of accident.
 
 ```{r}
 daytime
 ```
 
 12:00 to 18:00 hours is the time when less accidents happen. Visibility factor can be inferred from this relation. Accidents are more likely to occur when there is low visibility. Most of the accidents occur during night time, as seen from the data. Day time has also considerable amount of acccidents but on the basis of visibility criteria it is almost half compared to night time. Increasing security during night time can help in preventing these mishaps.
+
+```{r}
+ggplot(data = tr)+
+    geom_histogram(aes(x = daytime, fill = season),
+                   position = 'dodge',
+                   color = I('black'),
+                   stat = "count")+
+    theme_minimal()+
+    xlab("Daytime")+
+    ylab("Accident Count")+
+    theme(axis.text.y = element_text(size = 8),
+          axis.text.x = element_text(size = 8),
+          axis.title.y = element_text(size = 12),
+          axis.title.x = element_text(size = 12))+
+    theme(panel.border= element_rect(colour = I("black"), fill = NA,
+                                      size = 1))
+```
+
+Daytime has second larget number of accidents because of accident in day in winter season.
 
 \newpage
 
@@ -541,7 +561,7 @@ env_dt
 
 We can clearly see that visibility is a key factor here. Such a large peak for night time in every environment shows how frequently accidents occur in low light. More on this in **season** section.
 
-Let us perform a chi-squared test to see the dependency of **environment and daytime**:
+Let us perform a Chi-squared test of dependence for **environment and daytime**:
 
 ```{r}
 #table(tr$env, tr$daytime)
@@ -581,7 +601,7 @@ season_dt <- ggplot(data = tr)+
 season_dt
 ```
 
-Now let us see the correlation between **season and daytime**:
+Now let us perform Chi-squared test of dependence for **season and daytime**:
 
 ```{r}
 test_season_dt <- chisq.test(table(tr$season, tr$daytime),
@@ -618,14 +638,14 @@ season_reg <- ggplot(data = tr)+
 season_reg
 ```
 
-Let us see dependency of season and region of train accident:
+Let us see perform Chi-squared test of dependence for season and region:
 ```{r}
 test_season_reg <- chisq.test(table(tr$season, tr$region),
            simulate.p.value = F)
 test_season_reg$p.value
 ```
 
-p-value for season-reg pair is 0.17 which is higher than the significance level 0.01. So, we cannot reject the null hypothesis that these two variable are independent of each other.
+As the p-value for this pair is 0.17 which is higher than the significance level 0.01, we cannot reject the null hypothesis that these two variable are independent of each other.
 
 In South, accidents are more common in summer because of hot climate there. North, on the other hand, has harsh climatic conditions here which is a more severe cause than tropical Southern India. Dense fog in winter affects the timing of train.
 
@@ -668,7 +688,7 @@ train_type_reg <- ggplot(data = tr)+
 train_type_reg
 ```
 
-Let us see the relation between train type and region:
+Let us perform Chi-squared test of dependence for train type and region:
 ```{r}
 tr.type.reg <- chisq.test(table(tr$train_type, tr$region),
                           simulate.p.value = F)
@@ -677,7 +697,7 @@ tr.type.reg$p.value
 
 No strong relation between train type and region of accident. A p-value of 0.438 means that we cannot reject the null hypothesis that season and train types are independent of each other. We can conclude from this statistic that there is no specific part of India where one type of train is running more frequently. 
 
-2 accidents occurred where passenger were sitting on the top of train. This is the result of **dense population** and in order to accommodate facility for increasing population, new railway tracks are laid wherever necessary ^[8]^. **NEED TO INCLUDE POPULATION VARIABLE**
+2 accidents occurred where passenger were sitting on the top of train. This is the result of **dense population** and in order to accommodate facility for increasing population, new railway tracks are laid wherever necessary ^[8]^.
 
 On the other side, it is important to maintain the track also. As of 2014 statistics, 5300 km of track was due for renewal ^[8]^. This target keeps increasing if laying of new tracks and maintenance of old tracks are not balanced.
 
@@ -700,7 +720,7 @@ train_type_cause <- ggplot(data = subset(tr, cause != "unknown"))+
 train_type_cause
 ```
 
-Let us see the dependence of train type on cause of accident:
+Let us perform Chi-squared test of dependence for train type and cause of accident:
 
 ```{r}
 tr.type.cause <- chisq.test(table(tr$train_type,
@@ -713,7 +733,7 @@ tr.type.cause$p.value
 table(tr$train_type)
 ```
 
-As p-value is still higher than 0.01 significance level, but if we relax the significance level criteria to 0.1 then we can conclude to some extent that cause and train type are related with each other. Chance of accident is high if we are testing for express trains.
+As the p-value is still higher than 0.01 significance level, but if we relax the significance level criteria to 0.1 then we can conclude to some extent that cause and train type are related with each other. But 0.1 level of significance is very high. Chance of accident is high if we are testing for express trains.
 
 High green peaks show that human error is most responsible for almost every type of train accident. Driver's mistake comes under this case but there is no right way to avoid accidents cause by driver's mistake. Some ways can be deploying experienced drivers, changing drivers on shift-basis for long journey trains, checking physical fitness of driver, etc.
 
@@ -785,7 +805,7 @@ Technological aids of Automatic Train Protection System to
 loco pilots to avoid collisions due to Signal Passing at Danger (SPAD)
 or over speeding have been put on trial on Indian Railways ^[12]^.
 
-**Q6.** What are the major causes for accidents? Most of the factors result in derailment of train as we see in news reports. But we will try to investigate the cause for these derailments. Whether it is human error, natural cause or technical glitch.
+**Q6.** What are the major causes for accidents? Is there any significant difference across different causes? Most of the factors result in derailment of train as we see in news reports. But we will try to investigate the cause for these derailments. Whether it is human error, natural cause or technical glitch.
 
 **A6.**
 
@@ -793,12 +813,74 @@ or over speeding have been put on trial on Indian Railways ^[12]^.
 table(tr$cause)
 ```
 
-Human error is responsible for most of the accidents. It includes drivers' and signalers' fault. Out of 114 observation collected, 28.07% accidents are caused by human error. 20 of them were not investigated tightly so the cause was unknown for them.
+Human error is responsible for most of the accidents. It includes drivers' and signalers' fault. Out of 114 observation collected, 28.07% accidents are caused by human error.
+
+Let us perform some post-hoc tests to see whether some specific cause are more important than others. We will see relation between different cause and their affect on casualties.
+
+Filling null values by median for `killed` column and `injured` column:
+
+```{r echo = T}
+tr$killed[is.na(tr$killed)] <- with(tr, ave(killed, cause, 
+                                            FUN = function(x) median(x, na.rm = TRUE)))[is.na(tr$killed)]
+
+tr$injured[is.na(tr$injured)] <- with(tr, ave(injured, cause, 
+                                            FUN = function(x) median(x, na.rm = TRUE)))[is.na(tr$injured)]
+
+```
+
+Creating victim column after handling null values in killed column and injured column:
+
+```{r echo = T}
+tr$victim <- tr$injured + tr$killed
+```
+
+```{r}
+tr <- subset(tr, cause != "unknown")
+```
+
+Let us perform one-way ANOVA test for victims column:
+
+```{r echo = T}
+v <- aov(victim ~ cause, data = tr)
+summary(v)
+```
+
+As the p-value is greater than 0.05, we cannot reject the null hypothesis that victims is independent of cause.
+
+Perform same tests for killed and injured columns also:
+
+```{r}
+k <- aov(killed ~ cause, data = tr)
+summary(k)
+```
+
+```{r}
+i <- aov(injured ~ cause, data = tr)
+summary(i)
+```
+
+As the p-value is high for both injured and killed column, we cannot reject the null that they are independent of cause.
+
+We are trying to build a linear model to explain the relationship between killed column and `cause`. Now let us see how much significant each cause is:
+
+```{r}
+mod <- lm(killed ~ cause, data = tr)
+summary(mod)
+```
+
+We can see that human error is the most important cause for accidents because it has the least p-value 0.008. It is very much less than 0.01 significance level. It can be considered an important factor. Excpet fire, other causes are also significant in predicting `killed` variable. Fire is unexpected case so it is not so much important.
 
 Train Protection and Warning System (TPWS) is a proven Automatic Train Protection System to avoid train accidents on account of human error of Signal Passing at Danger (SPAD) or over-speeding. As a pilot project, TPWS has been provided on Chennai-Gummidipundi Suburban Section of Southern Railway, Hazrat Nizamuddin - Agra Section of Northern/North Central Railway and Dum Dum-Kavi Subhash section of Kolkata Metro ^[14]^.
 
+One way ANOVA showed that `killed` is independent of `cause`. Now let us finally conduct Tukey Honest Significance test:
 
+```{r echo = T}
+a1 <- aov(killed ~ cause, data = tr)
+summary(a1)
+TukeyHSD(a1)
+```
 
+There is no pair for which the upper and lower range of 95% confidence interval lie on the same side of zero. So there is not any statistical difference across different types of cause.
 \newpage
 
 # 9. Solution
@@ -864,7 +946,7 @@ There are some limitations of this data:
 
 \newpage
 
-# 12. References:
+# 12. References
 
 1. [https://en.wikipedia.org/wiki/List_of_Indian_rail_accidents]
 
@@ -893,9 +975,3 @@ There are some limitations of this data:
 13. [http://www.dailymail.co.uk/indiahome/indianews/article-3683522/Indian-Railways-use-radar-based-eye-device-warn-drivers-hazards-line.html]
 
 14. [http://pib.nic.in/newsite/PrintRelease.aspx?relid=155175]
-
-```{r}
-write.csv(tr,
-          file =  "file.csv")
-```
-

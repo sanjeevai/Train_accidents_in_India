@@ -1,10 +1,10 @@
 ---
 output:
+  pdf_document:
+    toc: true
   word_document:
     toc: true
   html_document:
-    toc: true
-  pdf_document:
     toc: true
 ---
 
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ```{r}
 # set working directory
-setwd("~/Google Drive/Documents/R/DoMS project")
+setwd("~/Google/Documents/R/DoMS project")
 ```
 
 ```{r}
@@ -42,7 +42,7 @@ library(qcc)
 
 ```{r}
 # import data
-tr <- read.csv("/Users/sanjeevyadav/Google Drive/Documents/R/DoMS project/DoMS_2.5.2.csv")
+tr <- read.csv("/Users/sanjeevyadav/Google/Documents/R/DoMS project/DoMS_2.5.2.csv")
 ```
 
 \newpage
@@ -883,33 +883,7 @@ TukeyHSD(a1)
 There is no pair for which the upper and lower range of 95% confidence interval lie on the same side of zero. So there is not any statistical difference across different types of cause.
 \newpage
 
-# 9. Solution
-
-Based on 114 observation from year 2002 to 24 November 2017,  relevant factors of accident are:
-
-* visibility issue as seen when comparing for different season and daytime;
-
-* human error like overshooting red signals, negligence on level-crossings;
-
-* poor maintenance of tracks degrading quality of track;
-
-* **population explosion specifically in North India**, etc.
-
-From this data possible solution to avoid train accidents are:
-
-* proper checking of quality of railway tracks;
-
-* no speeding at night;
-
-* use of ultrasonic waves to detect crack in track from a large distance to avoid derailments and speeding problems;
-
-* following rules near level crossing because they are purposely locked sometimes for train to cross. People should not be in haste while crossing roads when it's time for train crossing;
-
-* proper signalling at train stoppages and halts because rescue may take time in remote places like open area  
-
-\newpage
-
-# 10. Conclusion
+# 9. Conclusion
 
 From the data of 16 years, it is clear that some causes can be prevented and some can't. Natural causes are very rare in causing accidents. Every year train accidents take place and exact cause of accident is not known in many cases. If the investigation of accidents are carried out in more depth then improvements can be made effectively. Accidents happening inside train, like fire, are less nowadays. Human negligence is major cause and will remain the cause in future if no special attention is given by train drivers, roadways riders, people crossing tracks, vehicles crossing tracks, etc. 
 
@@ -925,7 +899,7 @@ There are some limitations of this data:
 
 \newpage
 
-# 11. Abbreviations used
+# 10. Abbreviations used
 
 * c: Central Railway Zone
 * e: Eastern Railway Zone
@@ -946,7 +920,7 @@ There are some limitations of this data:
 
 \newpage
 
-# 12. References
+# 11. References
 
 1. [https://en.wikipedia.org/wiki/List_of_Indian_rail_accidents]
 

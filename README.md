@@ -20,7 +20,7 @@ Here I performed the main part of the project. That includes:
 
 2. report.pdf
 
-It is the pdf export output of **report.rmd**
+It is the pdf export of **report.rmd**
 
 ## Libraries
 

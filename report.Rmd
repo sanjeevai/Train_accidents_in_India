@@ -146,7 +146,7 @@ tr$season <- factor(tr$season)
 levels(tr$season)
 ```
 
-The month value used as boundary condition for any two consecutive season just for convenience to create `season` column effectively with code. These intervals are taken from Wikipedia article ^[3]^ on **Climate of India**.
+The month value used as boundary condition for any two consecutive season is just for convenience to create `season` column effectively with code. These intervals are taken from Wikipedia article ^[3]^ on **Climate of India**.
 
 
 ## 5.2.  Type of train

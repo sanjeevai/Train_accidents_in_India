@@ -1,0 +1,115 @@
+X,environment,train_name,injured,killed,triggering_factor,time,railway_division,cause,env
+1,open rail track|over 2000 attackers,Sabarmati Express,43,58,attack by a mob at Godhra station in Gujarat and four coaches were set on fire,27-02-2002 08:30,w,attack,open
+2,open rail track,Shramjeevi Express,80,12, crash occurred when sabotage derailed the Shramjeevi express at Jaunpur,13-05-2002 03:00,n,attack,open
+3,collision on a manned level crossing,Kanpur Kasganj Express,29,49,Express collided with a passenger bus near the town of Kasganj,04-06-2002 13:00,ne,unclear track,busy
+4,natural on a bridge over Dhave river,Howrah-Rajdhani Express,150,140,derailed on a bridge between Gaya and Dehri-on-Sone stations|with two coaches falling into a river|terrorist sabotage was blamed,09-09-2002 22:40,ec,attack,water
+5,open rail track,Golden Temple Mail,15,36,three coaches caught fire,15-05-2003 03:15,n,fire,open
+6,inclement weather,Matsyagandha(Mangalore-Mumbai) Express,62,14,derailed when it struck a boulder on the line,16-06-2004 05:00,k,unclear track,natural
+7,open rail track,Jammu Tawi Passenger,50,37,The accident was allegedly caused due to a fault in the telephone line|preventing proper signal warnings,14-12-2004 11:45,n,human error,open
+8,open rail track,Shramjeevi Express,50,13,engine was halted immediately and derailment was prevented,28-07-2005 17:15,n,attack,open
+9,open rail track,Gwalior-bound Bundelkhand Express,100,16,derailed after brake failure,03-10-2005 03:00,nc,technical,open
+10,area affected by heavy naturals,Island Express,0,0,the incident led to major tnaturals on Bangalore-Chennai route being cancelled for a few days,25-10-2005 21:30,sw,natural,natural
+11,the area was lashed by monsoon naturals for several weeks,Delta Fast Passenger ,200,114,derailed where a small rail bridge had been swept away by a flash flood|near the town of Valigonda,29-10-2005 04:00,sc,natural,natural
+12,several routes' tnaturals got bombed,various|others,714,209,series of 7 bomb blasts continued for 11 minutes,11-07-2006 18:24,c,attack,parallel tracks
+13,old overbridge collapsed,Howrah-Jamalpur Superfast Passenger,17,35,concrete fell form bridge and killed many passengers in sleeper compartment,01-12-2006 08:00,e,technical,bad track
+14,open rail track,The Delhi—Lahore Samjhauta Express,NA,NA,,18-02-2007 23:53,n,attack,open
+15,Kesamudram station,Gowthami Express,NA,40,a short circuit could have caused the fire,01-08-2008 02:00,sc,fire,station
+16,open rail track|with fields around,Coromandel Express,140,15,tnatural was running at high speed,13-02-2009 19:50,nw,human error,open
+17,multiple collisions with vehicles in way,others,11,4,unknown person hijacked the tnatural and drove it at high speed,29-04-2009 04:50,s,attack,busy
+18,open rail track,Goa Express,15,22,,20-10-2009 05:00,nc,human error,open
+19,single line,Mysore-Ajmer Express,5,0,incessant natural delayed the rescue operations,11-11-2009 19:15,c,natural,open
+20,open rail track,Jodhpur-Delhi Mandore Express,20,7,Following the derailment|a portion of the tracks pierced the AC compartment and probably hit the passengers|they said,14-11-2009 01:30,n,unknown,open
+21,stationary tnatural on track,Delhi-Sitamarhi Lichchavi Express,10,5,natural was the reason|a series of accidents happened in Uttar Pradesh on the same day,02-01-2010 08:15,nc,natural,busy
+22,stationary tnatural on track,Bhiwani-Gorakhpur Gorakhdam Express,51,10,natural was the reason,02-01-2010 09:00,nc,natural,busy
+23,tractor trolley on track,Saryu Express,2,0,natural was the reason,02-01-2010 11:00,n,natural,busy
+24,,Arunachal Pradesh Express,0,0,,03-01-2010 08:15,nef,unknown,open
+25,natural near Nitwali-Tundla crossing,Kalindi Express,15,3,natural,16-01-2010 08:15,nc,natural,others
+26,Barha railway crossing|police station area,Lucknow-Sultanpur Harihar Nath Express,4,2,happened when tnatural hit the car at unmanned level crossing,17-01-2010 13:00,n,human error,busy
+27,open rail track,goods tnatural|Freight,0,0,,22-01-2010 09:00,ne,unknown,open
+28,busy route got halted|parallel tracks,Guwahati bound Rajdhani Express,11,0,,25-05-2010 06:40,ec,attack,busy
+29,Maoist area remove part of the railway track,Lokmanya Tilak Terminus Jnaneswari Super Deluxe Express,200,148,first explosion|then  an oncoming goods collided|killing 141 passengers,28-05-2010 01:30,se,attack,bad track
+30,unmanned level-crossing,Coimbatore-Mettupalayam special tnatural|Express,12,5,bus driver noticed the tnatural when bus was on the level crossing|but got stranded and engine stopped,04-06-2010 16:50,s,human error,busy
+31,unmanned level-crossing,Vasco-Howrah Amaravati Express,27,0,tnatural hit a road roller at unmanned level crossing,18-06-2010 21:00,wc,unknown,busy
+32,,Sealdah-bound Uttarbanga Express,165,66,collision with a tnatural which was just about to start|the tnatural has passed the red signal at high speed,19-07-2010 02:00,e,human error,busy
+33,open rail track,goods tnatural|Freight,50,23,Just before the accident|the goods tnatural driver jumped off from the locomotive and fled,20-09-2010 05:00,wc,human error,open
+34,open rail track,goods tnatural|Freight,NA,NA,,21-09-2010 08:20,nc,unknown,open
+35,while passing through a culvert near Kasganj in Kanshi Ram Nagar district,Kasganj-Lucknow Rohilkhand Express ,12,0,assistant driver was missing after the accident,24-09-2010 05:30,ne,attack,water
+36,,Amritsar-Sealdah Akaltakth Express,3,0,tnatural collided with two trucks,01-01-2011 06:00,n,human error,busy
+37,busy route got halted|parallel tracks,goods tnatural|Freight,0,0,4 wagons of goods tnatural derailed,03-01-2011 21:00,n,unknown,busy
+38,busy route got halted|parallel tracks,Mumbai-Delhi Rajdhani Express ,0,0,the 4 affected coaches were detached at Thuriya station,18-04-2011 02:20,wc,fire,busy
+39,busy route got halted|parallel tracks,goods tnatural|Freight,0,0,,16-05-2011 22:30,sc,unclear track,busy
+40,unmanned level-crossing,Chhapra-Mathura Express,31,38,bus experienced technical snag and was stationary on rail track,07-07-2011 01:55,ne,technical,busy
+41,open rail track,Delhi-bound Howrah-Kalka Mail,300,70,bogies toppled over|gas cutters were used to cut metal compartment to save passengers,10-07-2011 12:20,nc,human error,open
+42,open rail track,Guwahati–Puri Express,100,NA,tnatural derailed after bombing,10-07-2011 20:30,e,attack,open
+43,parallel tracks,Guwahati–Bangalore Kaziranga Express,200,3,the derailed coaches thrown were thrown into the path of the oncoming Azimgarh-Malda express,31-07-2011 19:05,e,unknown,parallel tracks
+44,tnatural was hit by a rail engine,goods tnatural|Freight,0,0,derailment after collision,02-09-2011 23:00,sw,human error,busy
+45,stationary tnatural on track,Chennai Beach-Vellore Cantonment MEMU tnatural|others,100,10,tnatural collided with another passenger tnatural|which was waiting on the track,13-09-2011 21:40,s,human error,busy
+46,open rail track,Howrah–Dehradun Doon Express,NA,7,some hinted at a gas cylinder blast in one of the coaches as the reason behind the fire,22-11-2011 02:30,e,fire,open
+47,railway station,Delhi-bound Brahmaputra Mail,9,5,stationary goods tnatural rolled back and collided with mail tnatural,11-01-2012 05:50,e,human error,station
+48,unmanned level-crossing,Guwahati-bound Passenger,50,3,derailed,03-02-2012 09:30,nef,human error,busy
+49,open rail track,Gwalior-bound narrow gauge tnatural|others,0,0,derailed after hitting a tractor,05-02-2012 04:04,nc,unclear track,open
+50,people standing on the rail track,Trivandrum–Kozhikode Jan Shatabdi Express ,1,3,people were watching Uthralikkavu pooram sample fireworks standing on the railway track,26-02-2012 21:00,s,unclear track,busy
+51,unmanned level-crossing,Islampur-Patna MEMU Passenger tnatural,7,0,tnatural dashed against some vehicles,19-03-2012 20:00,ec,unclear track,busy
+52,unmanned level-crossing,Mathura-Kasganj Express,4,15,,20-03-2012 07:19,ne,human error,busy
+53,unmanned level-crossing,MEMU(Mainline Electric Multiple Unit) tnatural|others,0,2,,26-03-2012 13:30,sw,human error,busy
+54,open rail track,Firozpur-Mumbai Punjab Mail,26,0,,06-05-2012 07:00,n,unknown,open
+55,stationary goods tnatural on track,Hubli–Bangalore Hampi Express,59,25,driver overshot the signal,22-05-2012 03:15,sc,human error,busy
+56,open rail track,Howrah–Dehradun Doon Express,15,7,,31-05-2012 13:13,n,unknown,open
+57,open rail track,Vidarbha Express,31,3,Vidarbha tnatural collided with derailed coaches of a local tnatural,19-07-2012 21:30,c,unclear track,open
+58,railway station,Tamil Nadu Express,25,32,officials suspect that electrical short circuit may have caused the fire,30-07-2012 04:20,sc,fire,station
+59,,Solapur-bound Falaknuma Passenger,9,0,,16-10-2012 21:00,c,fire,open
+60,open rail track,Chennai-New Delhi Grand Trunk Express,0,1,officials suspect that electrical short circuit may have caused the fire|decease died due to heart attack after bearing immense heat,30-11-2012 02:00,nc,fire,open
+61,level-crossing,Indore–Yesvantpur Express,0,0,tnatural collided with a truck,19-12-2012 20:00,sc,unclear track,busy
+62,boulders fallen on track from inside the tunnel,Pune–Ernakulam Superfast Express,0,0,The boulders from the inside walls of the tunnel had fallen on the track,20-12-2012 03:20,k,unclear track,others
+63,parallel tracks,Muzaffarpur–Yesvantpur Weekly Express,33,1,,10-04-2013 05:30,s,unknown,parallel tracks
+64,parallel tracks,Saharsa Patna Rajya Rani Express,40,37,as a result|angry mob set the tnatural coaches on fire and beat the driver to death,19-08-2013 08:40,ec,human error,parallel tracks
+65,parallel tracks,Rayagada-Viajyawada Passenger,20,10,a RUMOUR was spread that there was fire in express tnatural so they jumped out and got mowed by a passenger tnatural travelling in opposite direction,02-11-2013 18:40,eco,human error,parallel tracks
+66,forest area,others,10,7,worst of its kind|human error of tnatural in forest area,13-11-2013 17:40,nef,human error,trees
+67,,Nizamuddin Ernakulam Mangala Lakshadweep Superfast Express,37,3,,15-11-2013 06:25,c,technical,parallel tracks
+68,,Bangalore City–Hazur Sahib Nanded Express,8,26,The 'dry chemical powder’ type portable fire extinguishers were insufficient in controlling fire,28-12-2013 03:30,sc,fire,open
+69,open rail track,others,3,1,threw traffic signal on the Central line out of gear,20-03-2014 14:30,c,human error,open
+70,open rail track,Delhi-Dibrugarh Rajdhani Express,20,4,exact cause of DERAILMENT is not known|Govt. blaming the Naxals and the Maoists,14-04-2014 06:00,ne,attack,open
+71,railway station,Guwahati–Bangalore Kaziranga Express,14,1,arrest of an alleged ISI spy|Mohammed Zakir Hussain,01-05-2014 07:15,s,attack,station
+72,open rail track,Diva-Sawantvadi Passenger,145,22,,04-05-2014 09:40,c,unknown,open
+73,,Gorakhdham Express,100,40,station master apparently gave the green signal to the passenger while the goods tnatural was standing on the same track,26-05-2014 11:00,ne,human error,busy
+74,loop line,Yashwantpur-Howrah Express,0,0,instead of entering the main line|the tnatural entered the loop line,04-06-2014 22:40,sw,human error,loop line
+75,parallel tracks|route affected,Shunting Locomotive|others,0,0,,05-06-2014 00:30,sc,unknown,parallel tracks
+76,open rail track,Dibrugarh Rajdhani Express,8,4,Sabotage is not the cause behind the accident,25-06-2014 02:15,ne,unknown,open
+77,unmanned level-crossing,a Nanded Passenger tnatural,26,26,the tnatural dragged the bus for about a kilometre,23-07-2014 09:10,sc,unclear track,busy
+78,open rail track,Bangalore City–Ernakulam Intercity Express ,100,12,crack in track|variation in track gauge|boulders on the track,13-02-2015 07:35,sw,technical,open
+79,open rail track,Dehradun Varanasi Janta Express,150,58,the locomotive driver apparently overshot the signal|maybe brake fail|led to derailment,20-03-2015 09:10,n,human error,open
+80,open rail track,Muri Express,50,5,disruption of other tnaturals,25-05-2015 14:00,n,unknown,open
+81,dilodged culvert near Machak river caused track misalignment,Kamayani Express,100,31,"over 300 passengers were rescued and bodies of victims were recovered, sudden flash floods may be the cause of derailment",04-07-2015 23:30,wc,natural,water
+82,parallel tracks,Secunderabad Junction-Lokmanya Tilak Terminus Duronto Express,7,2,,12-09-2015 02:15,c,unknown,parallel tracks
+83,surrounded by trees,Kalka-Shimla Shivalik Queen narrow gauge railway|others,13,2,derailed due to fast bending in left direction|37 Britons were boarded including,12-09-2015 13:20,n,human error,trees
+84,parallel tracks|route affected,Virar-Churchgate Semi-Fast Local|others,0,0,tnaturals in Western Railway massively disrupted,15-09-2015 11:00,w,technical,parallel tracks
+85,parallel tracks,Island Express,40,0,several tnaturals cancelled,05-02-2016 04:15,s,technical,parallel tracks
+86,parallel tracks|route affected,Faizabad Delhi Express,50,0,the derailed coaches of the tnatural remained dangerously tilted,01-05-2016 21:05,n,human error,parallel tracks
+87,parallel tracks|route affected,Chennai Central-Thiruvananthapuram Central Express,0,0,driver jumped the signal,06-05-2016 20:15,s,human error,parallel tracks
+88,heavy natural caused derailment,Kanyakumari-Dibrugarh Vivek Express,0,0,,19-05-2016 01:10,s,natural,natural
+89,unmanned level-crossing, Varanasi-Allahabad Passenger,11,8,van driver was with earphones onn and did not listen to railway guard,26-07-2016 07:25,n,human error,busy
+90,parallel tracks|route affected,Thiruvananthapuram Central-Mangalore Central Express,0,0,,28-08-2016 02:30,s,technical,parallel tracks
+91,open rail track,goods tnatural|Freight,0,0,10 tnaturals except express tnaturals were cancelled,20-09-2016 00:30,s,unknown,open
+92,open rail track,Passenger tnatural,30,2,passenger tnatural collided with stationary goods tnatural,29-09-2016 18:30,eco,human error,open
+93,near river|route affected,Jammu Tawi-Pune Jhelum Express,3,0,10 coaches derailed,04-10-2016 03:10,n,human error,water
+94,remote area|rescue took time,Indore-Patna Express,100,96,railway fracture due to low temperature,20-11-2016 03:00,nc,technical,open
+95,remote area|rescue took time,Guwahati-bound Capital Express,10,2,,06-12-2016 21:00,nef,technical,open
+96,open rail track,Ajmer Sealdah Express,44,0,natural,28-12-2016 05:20,nc,natural,open
+97,parallel tracks|route affected,Hirakhand Express,100,39,clear indication of sabotag by Naxalite as republic day was approaching,21-01-2017 23:00,eco,attack,parallel tracks
+98,open rail track,Kalindi Express,3,0,driver overshoot the signal|rammed into a freight tnatural on the same track,20-02-2017 01:30,nc,human error,open
+99,railway station,Bhopal-Ujjain Passenger,10,0,First IS attack in India,07-03-2017 09:30,wc,attack,station
+100,unmanned level-crossing,others,1,4,tnatural rams into ambulance at an unmanned level crossing,17-03-2017 19:30,sw,human error,busy
+101,parallel tracks|route affected,Mahakoshal Express,52,0,,30-03-2017 02:20,nc,technical,parallel tracks
+102,parallel tracks|route affected,goods tnatural|Freight,0,0,,09-04-2017 06:00,se,unknown,parallel tracks
+103,open rail track,Meerut-Lucknow Rajya Rani Express,24,0,eight coaches derailed,15-04-2017 08:15,n,technical,open
+104,,goods tnatural|Freight,0,0,,01-05-2017 01:50,c,unknown,open
+105,track was being repaired without permission from senior officials,Puri - Haridwar Utkal Express,154,24,caused due to negligence by maintenance team,19-08-2017 17:45,n,technical,busy
+106,unmanned level-crossing,Kaifiyat Express,70,0,derailed when unauthorised dumper hits the tnatural,23-08-2017 02:40,nc,unclear track,busy
+107,heavy natural washed away a part of the tracks,Nagpur - Mumbai Duronto Express,74,0,incessant washed away a part of the tracks,29-08-2017 06:30,c,natural,natural
+108,open rail track,Howrah-Jabalpur Shaktipunj Express,0,0,reason for derailment not yet known,07-09-2017 06:25,ec,unknown,open
+109,tnatural derailed while changing track,Ranchi Rajdhani Express,1,0,,07-09-2017 11:45,n,technical,trees
+110,washing line,Kashi Vishwanath Express,0,0,,09-09-2017 04:00,n,unknown,busy
+111,an old weld gave away due to the weight of the power car,Jammu Tawi-New Delhi Rajdhani Express,0,0,tnatural has just stopped at the platform when the last coach went off the track,14-09-2017 06:02,n,technical,bad track
+112,the vehicle was packed with people belonging to a marriage party,local tnatural|others,2,4,at Matha Bhusunda village under the Musafirkhana police station|an official said,23-11-2017 19:19,n,human error,open
+113,soon after leaving platform number 2,Vasco Da Gama-Patna Express,9,3,accident occurred soon after leaving platform number 2 of the Manikpur Railway station,24-11-2017 04:18,nc,technical,parallel tracks
+114,parallel tracks|route affected,Paradeep-Cuttack goods tnatural|Freight,0,0,14 wagons of a goods tnatural carrying coal also derailed in Odisha's Khurda Road,24-11-2017 05:55,eco,technical,parallel tracks

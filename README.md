@@ -4,11 +4,19 @@ Train is the most common mode of travel for long distance journey in India. This
 
 ## Data
 
-Data was collected from various news websites, online news archives, Wikipedia articles, etc. Data was available on the internet from year 1890-2017 but analysis is carried out for 2002- 2017 because news reports on many old incidents needed citations and some of them were reported in less detail on news websites. To cover major features affecting the accident rate in India and to closely compare them, 2002-2017 year range provided enough observations (114) to make some statistical conclusion.
+Data was collected from various news websites, online news archives, Wikipedia articles[1], etc. Data was available on the internet from year 1890-2017 but analysis is carried out for 2002- 2017 because news reports on many old incidents needed citations and some of them were reported in less detail on news websites. To cover major features affecting the accident rate in India and to closely compare them, 2002-2017 year range provided enough observations (114) to make some statistical conclusion.
 
 ## Files
 
-1. report.rmd
+1. DoMS_2.5.2.csv
+
+Input data with 9 features and 114 observations.
+
+2. project.ipynb
+
+Data analysis in Python. This was required for project submission in Udacity's Data Scientist Nanodegree program.
+
+3. report.rmd
 
 Here I performed the main part of the project. That includes:
 
@@ -18,11 +26,11 @@ Here I performed the main part of the project. That includes:
 * Exploratory Data Analysis
 * Hypothesis Testing
 
-2. report.pdf
+3. report.pdf
 
 It is the pdf export of **report.rmd**
 
-## Libraries
+## R Libraries
 
 - ggplot2
 - lubridate
@@ -33,3 +41,7 @@ It is the pdf export of **report.rmd**
 - dplyr
 - gridExtra
 - qcc
+
+## References
+
+1. [List of Indian rail accidents](https://en.wikipedia.org/wiki/List_of_Indian_rail_accidents)

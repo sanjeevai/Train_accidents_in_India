@@ -8,6 +8,10 @@ Data was collected from various news websites, online news archives, [Wikipedia 
 
 ## Files
 
+* abbreviations.md
+
+Contains abbreviations used in this project.
+
 * DoMS_2.5.2.csv
 
 Input data with 9 features and 114 observations.
@@ -18,7 +22,7 @@ Data analysis in Python. This was required for project submission in Udacity's D
 
 * report.rmd
 
-Here I performed the main part of the project. That includes:
+Here I performed the main part of the project in R. That includes:
 
 * Data Pre-Processing
 * Feature engineering
@@ -26,9 +30,9 @@ Here I performed the main part of the project. That includes:
 * Exploratory Data Analysis
 * Hypothesis Testing
 
-3. report.pdf
+* report.pdf
 
-It is the pdf export of **report.rmd**
+It is the PDF export of **report.rmd**
 
 ## R Libraries
 
@@ -41,3 +45,19 @@ It is the pdf export of **report.rmd**
 * dplyr
 * gridExtra
 * qcc
+
+## Results
+
+From the data of 16 years, it is clear that some causes can be prevented and some can't. Natural causes are very rare in causing accidents. Every year train accidents take place and exact cause of accident is not known in many cases. If the investigation of accidents are carried out in more depth then improvements can be made effectively. Accidents happening inside train, like fire, are less nowadays. Human negligence is major cause and will remain the cause in future if no special attention is given by train drivers, roadways riders, people crossing tracks, vehicles crossing tracks, etc. 
+
+## Limitations
+
+There are some limitations of this data:
+
+* it was not possible to account for each accident because of very brief report of some incidents on news websites
+
+* this report does not address solution for external attacks
+
+* condition (old or newly launched) of trains is not known
+
+* this report addresses accident counts over years 2002-2017. It does not analyse trends in casualties because we wanted to prevent them directly by knowing the cause of accidents.

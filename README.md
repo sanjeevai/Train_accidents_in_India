@@ -14,7 +14,7 @@ Input data with 9 features and 114 observations.
 
 * project.ipynb
 
-Data analysis in Python. This was required for project submission in Udacity's Data Scientist Nanodegree program.
+Data analysis in Python. This was required for project submission in Udacity's Data Scientist Nanodegree program. It contains the same results as in *report.rmd* file but in less depth.
 
 * report.rmd
 

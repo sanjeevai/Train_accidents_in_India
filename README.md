@@ -1,3 +1,7 @@
+# Train Accidents in India
+
+## [Blog version](https://medium.com/@sanjeevai/train-accidents-in-india-c1b0f180b2d2)
+
 ## Project Overview
 
 Train is the most common mode of travel for long distance journey in India. This year India has seen major accidents in railways due to several factors including natural causes and human error. We have tried to study the causes of train accidents for year 2002-2017, and other factors which trigger train accidents in different parts of the country. This report includes major accidents till 2017 which impacted the customer experience or say made it unsafe to travel in train.
@@ -45,6 +49,17 @@ It is the PDF export of **report.rmd**
 * dplyr
 * gridExtra
 * qcc
+
+## Python libraries
+
+* pandas
+* numpy
+* datetime
+* matplotlib
+* scipy
+* seaborn
+
+This project uses Python 3.
 
 ## Results
 

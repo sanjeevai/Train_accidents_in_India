@@ -9,6 +9,7 @@
 - [Results](#res)
 - [R libraries](#rlib)
 - [Python libraries](#pythonlib)
+- [Python vs R](#pythonr)
 - [Limitations](#lim)
 - [Acknowledgments](#ack)
 
@@ -82,6 +83,13 @@ From the data of 16 years, it is clear that some causes can be prevented and som
 * seaborn
 
 This project uses Python 3.
+
+<a id='pythonr'></a>
+## Python vs R
+
+You might be thinking why I did this project in both **Python and R**. The reason is that I often choose R over Python when there is no machine learning involved in the project. For statistical analysis, R seems more intuitive and compact. The goal of this project was **factor analyis**, and it did not require any machine learning algorithms at this stage.
+
+I created another version because it was a requirement of the the first project in Data Scientist Nanodegree Term 2.
 
 <a id='lim'></a>
 ## Limitations

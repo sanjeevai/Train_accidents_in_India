@@ -38,7 +38,7 @@ Input data with 9 features and 114 observations.
 
 * project.ipynb
 
-Data analysis in Python. This was required for project submission in Udacity's Data Scientist Nanodegree program. It contains the same results as in *report.rmd* file but in less depth.
+Data analysis in Python. This was required for project submission in **Udacity's [Data Scientist Nanodegree](https://in.udacity.com/course/data-scientist-nanodegree--nd025) program**. It contains the same results as in *report.rmd* file but in less depth.
 
 * report.rmd
 
@@ -89,7 +89,7 @@ This project uses Python 3.
 
 You might be thinking why I did this project in both **Python and R**. The reason is that I often choose R over Python when there is no machine learning involved in the project. For statistical analysis, R seems more intuitive and compact. The goal of this project was **factor analyis**, and it did not require any machine learning algorithms at this stage.
 
-I created another version because it was a requirement of the the first project in Data Scientist Nanodegree Term 2.
+I created Python version because it is a requirement of the the first project in **Udacity's Data Scientist Nanodegree Term 2**.
 
 <a id='lim'></a>
 ## Limitations

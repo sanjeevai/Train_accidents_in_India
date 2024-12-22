@@ -107,4 +107,4 @@ There are some limitations of this data:
 <a id='ack'></a>
 ## Acknowledgments
 
-This project was not possible without the supervision of _[Prof. J. K. Nayak](https://www.iitr.ac.in/departments/DM/pages/People+Faculty+Jogendra_Kumar_Nayak.html), Department of Management Studies, IIT Roorkee._ He guided me and readily clarified all the doubts that I encountered.
+This project was not possible without the supervision of _[Prof. J. K. Nayak](https://iitr.ac.in/Departments/Management%20Studies%20Department/People/Faculty/100587.html), Department of Management Studies, IIT Roorkee._ He guided me and readily clarified all the doubts that I encountered.
